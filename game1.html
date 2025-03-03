@@ -5,9 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game 1 - Mad Cap Games</title>
     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Mad Cap Games</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Games</a>
+                        <div class="dropdown-content">
+                            <a href="game1.html">Game 1</a>
+                            <a href="game2.html">Game 2</a>
+                            <a href="game3.html">Game 3</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Game Section -->
+    <section id="game">
+        <div class="container">
+            <h2>Game 1: Awesome Adventure</h2>
+            <div class="game-container">
+                <div class="game-iframe">
+                    <iframe src="https://www.example.com/game1" title="Awesome Adventure" frameborder="0"></iframe>
+                </div>
+                <div class="game-description">
+                    <h3>About the Game</h3>
+                    <p>Awesome Adventure is a thrilling game where you navigate through a series of obstacles and challenges to reach the final destination. Collect coins, avoid traps, and make it to the end!</p>
+                    <button class="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mad Cap Games. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
-        function toggleFullScreen() {
-            var iframe = document.getElementById("gameIframe");
+        function toggleFullscreen() {
+            const iframe = document.querySelector("iframe");
             if (iframe.requestFullscreen) {
                 iframe.requestFullscreen();
             } else if (iframe.mozRequestFullScreen) { // Firefox
@@ -19,41 +66,6 @@
             }
         }
     </script>
-</head>
-<body>
-
-    <header>
-        <div class="container">
-            <h1>Mad Cap Games</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="game1.html">Game 1</a></li>
-                    <li><a href="game2.html">Game 2</a></li>
-                    <li><a href="game3.html">Game 3</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="game-detail">
-        <div class="container">
-            <h2>Game 1: Adventure Quest</h2>
-            <div class="game-container">
-                <iframe id="gameIframe" src="https://www.example.com/game1" title="Game 1" frameborder="0"></iframe>
-            </div>
-            <p class="game-description">
-                Adventure Quest is an action-packed RPG game where you explore a mystical world, defeat monsters, and solve puzzles. Complete quests to gain experience and power-ups!
-            </p>
-            <button class="fullscreen-btn" onclick="toggleFullScreen()">Go Fullscreen</button>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Mad Cap Games. All rights reserved.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
