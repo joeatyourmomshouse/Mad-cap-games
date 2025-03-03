@@ -1,31 +1,165 @@
-.hero {
-    background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
-    text-align: center;
-    padding: 140px 0 120px; /* Increase padding to give more space above and below */
-    position: relative;
+/* General reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
     color: #fff;
-    height: 60vh;
-    background-size: cover;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.hero h2 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+header {
+    background-color: #111;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #ff5722;
+    text-align: center;
+    margin-bottom: 10px;
     font-weight: 600;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.hero p {
-    font-size: 1.4rem;
-    margin-bottom: 40px;
-    font-weight: 300;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff5722;
+}
+
+#games {
+    background-color: #333;
+    padding: 80px 0;
+}
+
+.game-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.game-item {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1 1 calc(33% - 20px);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.game-item iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.game-item iframe:hover {
+    transform: scale(1.03);
+}
+
+.game-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.game-item h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Game Detail Page */
+.game-detail {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.game-container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    border: none;
+}
+
+.game-description {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.fullscreen-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.fullscreen-btn:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Styling for the footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
 }
