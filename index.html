@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mad Cap Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mad Cap Games</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Unlock Your Gaming World</h2>
+            <p>No restrictions, just pure gaming freedom!</p>
+            <a href="#games" class="cta-btn">Play Now</a>
+        </div>
+    </section>
+
+    <section id="games">
+        <div class="container">
+            <h2>Featured Games</h2>
+            <div class="game-list">
+                <div class="game-item">
+                    <iframe src="https://www.example.com/game1" title="Game 1" frameborder="0"></iframe>
+                    <h3>Game 1</h3>
+                </div>
+                <div class="game-item">
+                    <iframe src="https://www.example.com/game2" title="Game 2" frameborder="0"></iframe>
+                    <h3>Game 2</h3>
+                </div>
+                <div class="game-item">
+                    <iframe src="https://www.example.com/game3" title="Game 3" frameborder="0"></iframe>
+                    <h3>Game 3</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Mad Cap Games</h2>
+            <p>Mad Cap Games is here to offer unrestricted gaming, free from the usual barriers. Play all your favorite games without limits!</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>If you need help with any game or encounter issues, we're here for you!</p>
+            <form action="#" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" class="cta-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mad Cap Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll effect for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
