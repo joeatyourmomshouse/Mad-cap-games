@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game 1 - Mad Cap Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleFullScreen() {
+            var iframe = document.getElementById("gameIframe");
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        }
+    </script>
+</head>
+<body>
 
+    <header>
+        <div class="container">
+            <h1>Mad Cap Games</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="game1.html">Game 1</a></li>
+                    <li><a href="game2.html">Game 2</a></li>
+                    <li><a href="game3.html">Game 3</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="game-detail">
+        <div class="container">
+            <h2>Game 1: Adventure Quest</h2>
+            <div class="game-container">
+                <iframe id="gameIframe" src="https://www.example.com/game1" title="Game 1" frameborder="0"></iframe>
+            </div>
+            <p class="game-description">
+                Adventure Quest is an action-packed RPG game where you explore a mystical world, defeat monsters, and solve puzzles. Complete quests to gain experience and power-ups!
+            </p>
+            <button class="fullscreen-btn" onclick="toggleFullScreen()">Go Fullscreen</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mad Cap Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
